@@ -1,1 +1,29 @@
 # L402
+
+sat@yog-satoth:~/Desktop/LightninGoatsL402$ curl -i -X GET http://127.0.0.1:8000/protected-resource
+HTTP/1.1 402 Payment Required
+date: Mon, 02 Dec 2024 19:14:54 GMT
+server: uvicorn
+www-authenticate: LSAT macaroon="MDAxYWxvY2F0aW9uIHlvdXJfc2VydmljZQowMDM0aWRlbnRpZmllciAzYzkxOTEzMy0xOTMxLTRkODMtODI3Mi1iMzY3MDNlMDIwNmUKMDA1OGNpZCBwYXltZW50X2hhc2ggPSAyMTZmZDJlMjljMjAyNzM2ZTJiNDE1YzA2MDMwMTMzZDczNTU4NDhiZmIyMWE2MTBjYTk4NzFkYjFjYjgwN2IzCjAwMzFjaWQgZXhwaXJhdGlvbiA9IDIwMjQtMTItMDJUMTk6NDQ6NTcuMjExMDA5WgowMDI0Y2lkIHNjb3BlID0gL3Byb3RlY3RlZC1yZXNvdXJjZQowMDJmc2lnbmF0dXJlIArRKBYqI8wT1oC-hhM4MuF4-iGmcfAeLIvccNZr5FIaCg", invoice="lnbc10n1pn5upe3pp5y9ha9c5uyqnndc45zhqxqvqn84e4tpytlvs6vyx2npcak89cq7esdqhg93kxetnwvs9qcted4jkuaqcqzzsxqzfvsp56fccewufzj6vj5z07v2umg3qzcxpalqgv8pz2zccexe2dzkzay7s9p4gqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqysgq8hz7sjnpcgr8sxqr90hykc4f9rgwpqrjazjtqm37plqkqz6wmzzjtqr40rj43zzd6yltfa44etzs4kma6ssw8hvhdthtqcuktk9wzqsqj3xevj"
+content-length: 29
+content-type: application/json
+
+{"detail":"Payment Required"}
+
+sat@yog-satoth:~/Desktop/LightninGoatsL402$ curl -i -X GET http://127.0.0.1:8000/protected-resource -H 'Authorization: LSAT MDAxYWxvY2F0aW9uIHlvdXJfc2VydmljZQowMDM0aWRlbnRpZmllciAzYzkxOTEzMy0xOTMxLTRkODMtODI3Mi1iMzY3MDNlMDIwNmUKMDA1OGNpZCBwYXltZW50X2hhc2ggPSAyMTZmZDJlMjljMjAyNzM2ZTJiNDE1YzA2MDMwMTMzZDczNTU4NDhiZmIyMWE2MTBjYTk4NzFkYjFjYjgwN2IzCjAwMzFjaWQgZXhwaXJhdGlvbiA9IDIwMjQtMTItMDJUMTk6NDQ6NTcuMjExMDA5WgowMDI0Y2lkIHNjb3BlID0gL3Byb3RlY3RlZC1yZXNvdXJjZQowMDJmc2lnbmF0dXJlIArRKBYqI8wT1oC-hhM4MuF4-iGmcfAeLIvccNZr5FIaCg'
+HTTP/1.1 402 Payment Required
+date: Mon, 02 Dec 2024 19:16:21 GMT
+server: uvicorn
+content-length: 48
+content-type: application/json
+
+{"detail":"Payment required but not completed."}
+
+sat@yog-satoth:~/Desktop/LightninGoatsL402$ curl -i -X GET http://127.0.0.1:8000/protected-resource -H 'Authorization: LSAT MDAxYWxvY2F0aW9uIHlvdXJfc2VydmljZQowMDM0aWRlbnRpZmllciAzYzkxOTEzMy0xOTMxLTRkODMtODI3Mi1iMzY3MDNlMDIwNmUKMDA1OGNpZCBwYXltZW50X2hhc2ggPSAyMTZmZDJlMjljMjAyNzM2ZTJiNDE1YzA2MDMwMTMzZDczNTU4NDhiZmIyMWE2MTBjYTk4NzFkYjFjYjgwN2IzCjAwMzFjaWQgZXhwaXJhdGlvbiA9IDIwMjQtMTItMDJUMTk6NDQ6NTcuMjExMDA5WgowMDI0Y2lkIHNjb3BlID0gL3Byb3RlY3RlZC1yZXNvdXJjZQowMDJmc2lnbmF0dXJlIArRKBYqI8wT1oC-hhM4MuF4-iGmcfAeLIvccNZr5FIaCg'
+HTTP/1.1 200 OK
+date: Mon, 02 Dec 2024 19:17:00 GMT
+server: uvicorn
+content-length: 80
+content-type: application/json
+
+{"message":"Welcome to the protected resource! Your payment has been verified."}
