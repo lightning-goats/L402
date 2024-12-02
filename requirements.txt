@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pymacaroons
+httpx
+pytz
+SQLAlchemy
+aiosqlite
+

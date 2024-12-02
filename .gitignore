@@ -1,0 +1,101 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environments
+*.env
+.env.*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# MacOS files
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Secret files (e.g., API keys)
+secrets.json
+secret_*.json
+
+# Test outputs
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# MyPy cache
+.mypy_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Pylint reports
+pylint-report.txt
+
+# Documentation build
+/docs/_build/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Node.js dependencies (if any frontend code)
+node_modules/
+
+# Local SQLite database (if used)
+*.sqlite3
+*.db
+
+# Security
+*.pem
+*.key
+*.crt
+
+# Sentry debug files
+*.map
+
+# AWS credentials
+*.csv
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Other
+*.orig
+

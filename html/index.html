@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LSAT Client Demo</title>
+  <!-- Content Security Policy -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self';
+  style-src 'self';
+  img-src 'self' https://api.qrserver.com;
+  connect-src 'self' http://localhost:8000;
+  object-src 'none';
+  frame-ancestors 'none';
+">
+
+  <!-- Include CSS for styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>LSAT Client Demo</h1>
+  <div id="public-content">
+    <button id="access-protected">Access Protected Resource</button>
+  </div>
+  <div id="invoice-section">
+    <h2>Payment Required</h2>
+    <p>Please pay the invoice below to access the resource.</p>
+    <img id="invoice-qr" alt="Scan to Pay" />
+    <textarea id="invoice-text" readonly></textarea>
+    <p id="payment-status">Awaiting payment...</p>
+  </div>
+  <div id="protected-content">
+    <h2>Protected Resource</h2>
+    <p id="resource-data"></p>
+  </div>
+  <p id="message"></p>
+  <!-- Include the JavaScript file -->
+  <script src="app.js"></script>
+</body>
+</html>
+
